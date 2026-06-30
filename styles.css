@@ -2958,3 +2958,222 @@ RESPONSIVE
 
 }
 
+/*=========================================
+CONTACT PAGE
+=========================================*/
+
+.contact-section{
+
+    max-width:900px;
+
+    margin:0 auto 6rem;
+
+    padding:0 1.5rem;
+
+}
+
+.contact-card{
+
+    background:linear-gradient(
+        180deg,
+        #181818,
+        #101010
+    );
+
+    border:1px solid rgba(212,175,55,.15);
+
+    border-radius:24px;
+
+    padding:4rem;
+
+    box-shadow:
+        0 25px 60px rgba(0,0,0,.45);
+
+}
+
+.contact-card form{
+
+    display:flex;
+
+    flex-direction:column;
+
+    gap:2rem;
+
+}
+
+
+/*=========================================
+LABELS
+=========================================*/
+
+.form-group{
+
+    display:flex;
+
+    flex-direction:column;
+
+}
+
+.form-group label{
+
+    margin-bottom:.75rem;
+
+    font-family:var(--ui);
+
+    font-size:.85rem;
+
+    letter-spacing:.15em;
+
+    text-transform:uppercase;
+
+    color:var(--gold);
+
+}
+
+
+/*=========================================
+INPUTS
+=========================================*/
+
+.form-group input,
+.form-group textarea{
+
+    width:100%;
+
+    padding:1.2rem 1.4rem;
+
+    background:#0b0b0b;
+
+    color:#fff;
+
+    border:1px solid #2c2c2c;
+
+    border-radius:16px;
+
+    font-size:1rem;
+
+    font-family:var(--ui);
+
+    transition:.35s ease;
+
+}
+
+.form-group input::placeholder,
+.form-group textarea::placeholder{
+
+    color:#777;
+
+}
+
+.form-group textarea{
+
+    min-height:240px;
+
+    resize:vertical;
+
+}
+
+
+/*=========================================
+FOCUS
+=========================================*/
+
+.form-group input:focus,
+.form-group textarea:focus{
+
+    outline:none;
+
+    border-color:var(--gold);
+
+    box-shadow:
+
+        0 0 0 4px rgba(212,175,55,.12);
+
+}
+
+
+/*=========================================
+BUTTON
+=========================================*/
+
+.contact-card button{
+
+    margin-top:1rem;
+
+    width:100%;
+
+    padding:1.2rem;
+
+    border:none;
+
+    border-radius:999px;
+
+    background:var(--gold);
+
+    color:#000;
+
+    font-family:var(--ui);
+
+    font-size:1rem;
+
+    font-weight:700;
+
+    letter-spacing:.08em;
+
+    cursor:pointer;
+
+    transition:.35s;
+
+}
+
+.contact-card button:hover{
+
+    background:var(--gold-light);
+
+    transform:translateY(-3px);
+
+}
+
+
+/*=========================================
+FORM DIVIDER
+=========================================*/
+
+.contact-card::before{
+
+    content:"";
+
+    display:block;
+
+    width:80px;
+
+    height:2px;
+
+    margin:0 auto 2.5rem;
+
+    background:var(--gold);
+
+}
+
+
+/*=========================================
+PHONE
+=========================================*/
+
+@media(max-width:768px){
+
+.contact-card{
+
+    padding:2rem;
+
+    border-radius:20px;
+
+}
+
+.form-group textarea{
+
+    min-height:180px;
+
+}
+
+}
