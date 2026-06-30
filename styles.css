@@ -1512,33 +1512,22 @@ READING PROGRESS
 ==================================================*/
 
 .reading-progress{
-
+    position:fixed;
+    top:82px;          /* directly below your sticky header */
+    left:0;
     width:100%;
-
-    height:8px;
-
-    background:#1d1d1d;
-
-    border-radius:999px;
-
-    overflow:hidden;
-
-    margin-bottom:4rem;
-
+    height:6px;
+    margin:0;
+    background:#222;
+    z-index:9998;
 }
 
 .progress-bar{
-
-    width:0;
-
     height:100%;
-
-    background:var(--gold);
-
-    transition:width .25s linear;
-
+    width:0%;
+    background:linear-gradient(90deg,#d4af37,#f2d16b);
+    box-shadow:0 0 10px rgba(212,175,55,.6);
 }
-
 
 /*==================================================
 CHAPTER DIVIDER
