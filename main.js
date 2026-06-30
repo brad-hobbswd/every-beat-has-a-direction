@@ -139,24 +139,37 @@ READING PROGRESS BAR
 
 function readingProgress(){
 
-    if(!progressBar) return;
+    if(!progressBar || !article) return;
 
-    const totalHeight =
+    const articleTop = article.offsetTop;
 
-        document.documentElement.scrollHeight -
+    const articleHeight = article.offsetHeight;
 
-        document.documentElement.clientHeight;
+    const viewport = window.innerHeight;
+
+    const maxScroll = articleHeight - viewport;
+
+    const current =
+        Math.max(
+            0,
+            Math.min(
+                window.scrollY - articleTop,
+                maxScroll
+            )
+        );
 
     const progress =
-
-        (window.scrollY / totalHeight) * 100;
+        maxScroll > 0
+            ? (current / maxScroll) * 100
+            : 100;
 
     progressBar.style.width = progress + "%";
 
 }
 
-window.addEventListener("scroll",readingProgress);
-
+window.addEventListener("scroll", readingProgress);
+window.addEventListener("load", readingProgress);
+window.addEventListener("resize", readingProgress);
 
 
 /*==================================================
